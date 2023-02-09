@@ -1,0 +1,19 @@
+footer{
+    
+    .footer_list{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    }
+    .foo_list{
+        border: solid rgb(117, 116, 116);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+   
+    span{
+        font-size: 2rem;
+    }
+
+}

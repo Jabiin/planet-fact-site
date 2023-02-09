@@ -1,0 +1,39 @@
+@mixin display {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    
+ nav {
+    h1{
+        font-size: 2rem;
+    }
+    padding: 2rem ;
+    display: flex;
+     @include display;
+     padding-bottom: 1.5rem;
+ }
+}
+ ul  {
+    list-style-type: none;
+    padding: 1rem 0;
+    border: solid;
+    border-left: none;
+    border-right: none;
+    border-width: 0.1rem;
+    width: 100%;
+    @include display;
+    li {
+        font-size: 1.5rem;
+        color: $font-color-grey;
+        padding: 1rem;
+
+    }
+ }
