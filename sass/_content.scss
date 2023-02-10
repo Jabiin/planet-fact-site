@@ -5,11 +5,20 @@ main {
     justify-content: center;
     align-items: center;
     height: 50vh;
+    @media only screen and (min-width: $bp-desktop){
+        grid-template-columns: 1fr 1fr;
+        height: 100vh;
+        justify-content: end;
+    }
 }
 
 .content-svg{
     width: 100% ;
     height: 40%;
+    @media only screen and (min-width: $bp-desktop){
+        width: 100% ;
+        height: 60%;
+    }
 }
 
 .main-content{
@@ -17,9 +26,34 @@ main {
     text-align: center;
     padding: 7rem;
     line-height: 1.9rem;
+    .btn-desktop{
+        display: none;
+    }
+    @media only screen and (min-width: $bp-desktop){
+        text-align: left;
+        padding: 16rem;
+        .btn-desktop {
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+        }
+        .btn {
+            padding: 2rem 8rem;
+            background-color: $bg-color-primary;
+            color: #fff;
+            border: solid;
+            &:hover {
+                background-color: blueviolet;
+                color: #fff;
+            }
+        }
+    }
     .main_conten_head{
         padding-bottom: 2rem;
         font-size: 4rem;
+        @media only screen and (min-width: $bp-desktop){
+            font-size: 6rem;
+        }
     }
  
 }

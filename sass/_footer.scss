@@ -4,16 +4,35 @@ footer{
     display: flex;
     flex-direction: column;
     width: 100vw;
+    @media only screen and (min-width: $bp-desktop){
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 3rem;
+        width: auto;
+
+    }
     }
     .foo_list{
         border: solid rgb(117, 116, 116);
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        @media only screen and (min-width: $bp-desktop){
+            flex-direction: column;
+            padding: 6rem 6rem;
+            align-items: flex-start;
+            border-width: 0.01rem;
+            font-weight: 300;
+            align-self: flex-start;
+        }
     }
    
     span{
         font-size: 2rem;
+        @media only screen and (min-width: $bp-desktop){
+            font-size: 3rem;
+            font-weight: 700;
+        }
     }
 
 }
