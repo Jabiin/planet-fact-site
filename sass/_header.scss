@@ -2,6 +2,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    @media only screen and (min-width: $bp-desktop){
+
+    }
 }
 
 
@@ -10,8 +13,12 @@ header {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    @media only screen and (min-width: $bp-desktop){
+        height: 10vh;
+    }
     
  nav {
+    
     h1{
         font-size: 2rem;
     }
@@ -19,8 +26,34 @@ header {
     display: flex;
      @include display;
      padding-bottom: 1.5rem;
+     .desktop-ver {
+        display: none;
+     }
+@media only screen and (min-width: $bp-desktop){
+       
+        h1 {
+            width: 40rem;
+            font-size: 4rem;
+            align-self: center;
+            padding-top: 1rem;
+        }
+       #menu {
+        display: none;
+       }
+       .desktop-ver {
+        display: flex;
+        justify-content: flex-end;
+        column-gap: 3rem;
+        border: none;
+       }
+    }
+
+
  }
+ 
 }
+
+
  ul  {
     list-style-type: none;
     padding: 1rem 0;
@@ -29,11 +62,38 @@ header {
     border-right: none;
     border-width: 0.1rem;
     width: 100%;
+    @media only screen and (min-width: $bp-desktop){
+        border: none;
+    }
     @include display;
-    li {
+    .mobile_list {
         font-size: 1.5rem;
         color: $font-color-grey;
         padding: 1rem;
+
+    }
+    
+    
+    @media only screen and (min-width: $bp-desktop){
+        border-top: none;
+        .mobile_list {
+            display: none;
+        }
+        .destop_list {
+            display: flex;
+            justify-content: space-around;
+            font-size: 1.4rem;
+            padding-top: 1.3rem;
+            
+            &:hover {
+                border: solid rgba(0, 0, 158, 0.836);
+                cursor: pointer;
+                border-bottom: none;
+                border-left: none;
+                border-right: none;
+                
+            }
+        }
 
     }
  }
