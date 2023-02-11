@@ -42,7 +42,9 @@ main {
             background-color: $bg-color-primary;
             color: #fff;
             border: solid;
+            border-color: rgba(128, 128, 128, 0.514);
             &:hover {
+                
                 background-color: blueviolet;
                 color: #fff;
             }
