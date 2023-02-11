@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="../sass/main.css">
 
     <title>planet face site</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Flip.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/EasePack.min.js" defer></script>
+    
+        <script src="../script.js" defer></script>
 </head>
 <body>
 
@@ -23,16 +28,32 @@
                     <h1> THE PLANETS</h1>
                     <svg id="menu" xmlns="http://www.w3.org/2000/svg" width="24" height="17"><g fill="#FFF" fill-rule="evenodd"><path d="M0 0h24v3H0zM0 7h24v3H0zM0 14h24v3H0z"/></g></svg>
                     <ul class="desktop-ver">
-                          
-                          <li class="destop_list"> <a href="/pages/mercury.html"> MERCURY </a></li>
-                          <li class="destop_list"> <a href="/pages/venus.html">VENUS </a> </li>
-                          <li class="destop_list"> <a href="../index.html">EARTH </a>  </li>
-                          <li class="destop_list">  <a href="/pages/mars.html">MARS </a> </li>
-                          <li class="destop_list"> <a href="/pages/jupiter.html">JUPITER </a> </li>
-                          <li class="destop_list"> <a href="/pages/saturn.html">SATURN </a> </li>
+                        <div class="nav-lis">
+                         <li class="destop_list"> <a href="./pages/mercury.html"> MERCURY </a></li>
+                         <div id="active"></div>
+                        </div> 
+                         <div class="nav-lis">
+                             <li class="destop_list"> <a href="/pages/venus.html">VENUS </a> </li>
+                         </div> 
+                         <div class="nav-lis">
+                             <li class="destop_list"> <a href="/index.html">EARTH </a>  </li>
+                         </div>
+                         <div class="nav-lis">
+                              <li class="destop_list">  <a href="/pages/mars.html">MARS </a> </li>
+                         </div>
+                        <div class="nav-lis">
+                         <li class="destop_list"> <a href="/pages/jupiter.html">JUPITER </a> </li>
+                        </div>
+                         <div class="nav-lis">
+                              <li class="destop_list"> <a href="/pages/saturn.html">SATURN </a> </li>
+                         </div>
+                        <div class="nav-lis">
                           <li class="destop_list"> <a href="/pages/uranus.html">URANUS </a> </li>
+                        </div>
+                        <div class="nav-lis">
                           <li class="destop_list"> <a href="/pages/neptune.html">NEPTUNE </a> </li>
-                    </ul>
+                        </div>
+                         </ul>
 
                 </nav>
                 <ul>

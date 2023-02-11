@@ -17,8 +17,13 @@ body {
   background-image: url(/assets/background-stars.svg);
   mix-blend-mode: lighten;
   z-index: -1000;
-  padding: 2rem;
 }
+@media only screen and (min-width: 900px) {
+  body {
+    padding: 2rem;
+  }
+}
+
 .wrapper {
   display: grid;
 }
@@ -64,6 +69,17 @@ header nav .desktop-ver {
          column-gap: 3rem;
     border: none;
   }
+  header nav .desktop-ver #active {
+    background-color: aqua;
+    height: 0.3rem;
+    position: absolute;
+    left: 0;
+    bottom: -0.6rem;
+    width: 100%;
+  }
+  header nav .desktop-ver .nav-lis {
+    position: relative;
+  }
 }
 
 ul {
@@ -98,19 +114,12 @@ ul .mobile_list {
   ul .destop_list {
     display: flex;
     justify-content: space-around;
-    font-size: 1.4rem;
+    font-size: 1.9rem;
     padding-top: 1.3rem;
   }
   ul .destop_list a {
     text-decoration: none;
     color: #fff;
-  }
-  ul .destop_list:hover {
-    border: solid rgba(0, 0, 158, 0.836);
-    cursor: pointer;
-    border-bottom: none;
-    border-left: none;
-    border-right: none;
   }
 }
 
@@ -162,6 +171,7 @@ main {
     background-color: hsl(240deg, 67%, 8%);
     color: #fff;
     border: solid;
+    border-color: rgba(128, 128, 128, 0.514);
   }
   .main-content .btn:hover {
     background-color: blueviolet;
