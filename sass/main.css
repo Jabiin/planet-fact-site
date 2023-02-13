@@ -139,7 +139,7 @@ main {
 
 .content-svg {
   width: 100%;
-  height: 40%;
+  height: 70%;
 }
 @media only screen and (min-width: 900px) {
   .content-svg {
@@ -186,6 +186,52 @@ main {
   .main-content .main_conten_head {
     font-size: 6rem;
   }
+}
+
+.sidebaar {
+  display: none;
+}
+@media only screen and (min-width: 900px) {
+  .sidebaar {
+    display: none;
+  }
+}
+.sidebaar .sidebarNav {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.sidebaar .sidebarNav .sidebartitle {
+  font-size: 2rem;
+}
+.sidebaar .side_list {
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  justify-content: space-between;
+  padding-top: 5rem;
+  border: none;
+}
+.sidebaar .side_list .side {
+  border: solid;
+  padding: 2.5rem 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  padding-left: 1rem;
+}
+.sidebaar .side_list .side:hover {
+  background-color: rgb(70, 60, 201);
+  color: antiquewhite;
+}
+.sidebaar .side_icons {
+  width: 3rem;
+  height: 3rem;
 }
 
 footer .footer_list {
