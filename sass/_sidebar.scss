@@ -1,0 +1,42 @@
+.sidebaar {
+    display: none;
+    .sidebarNav {
+        padding: 2rem;
+        display: flex;
+        justify-content: space-between;
+        .sidebartitle {
+            font-size: 2rem;
+        }
+    }
+    .side_list {
+        display: flex;
+        flex-direction: column;
+        height: 70vh;
+        justify-content: space-between;
+        padding-top: 5rem;
+        border: none;
+       
+        .side {
+            border: solid;
+            padding: 2.5rem 0;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            font-size: 2rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 2rem;
+            padding-left: 1rem;
+            &:hover {
+                background-color: rgb(70, 60, 201);
+                color: antiquewhite;
+            }
+           
+        }
+    }
+    .side_icons {
+        width: 3rem;
+        height: 3rem;
+    }
+}
