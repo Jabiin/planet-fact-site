@@ -1,4 +1,7 @@
 .sidebaar {
+    @media only screen and (min-width: $bp-desktop){
+        display: none;
+    }
     display: none;
     .sidebarNav {
         padding: 2rem;
