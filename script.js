@@ -3,6 +3,10 @@ const tl = gsap.timeline()
 const list = document.querySelectorAll('.nav-lis')
 const activeLine = document.getElementById('active')
 const btn = document.querySelectorAll('.btn')
+const cancel = document.querySelector('.material-symbols-outlined')
+const displaySide = document.querySelector('.sidebaar')
+const hamburger = document.querySelector('.hamMenue')
+const wrapper = document.querySelector('.wrapper')
 
 
 
@@ -24,5 +28,15 @@ tl
 
 
 
+hamburger.addEventListener('click', () => {
+    wrapper.style.display = 'none'
+    displaySide.style.display = 'block'
+})
+
+cancel.addEventListener('click', () => {
+    displaySide.style.display = 'none'
+    wrapper.style.display = 'grid'
+
+})
 
 
