@@ -7,6 +7,7 @@ const cancel = document.querySelector('.material-symbols-outlined')
 const displaySide = document.querySelector('.sidebaar')
 const hamburger = document.querySelector('.hamMenue')
 const wrapper = document.querySelector('.wrapper')
+const sideList = document.querySelectorAll('.side')
 
 
 
@@ -25,18 +26,21 @@ tl
 .from('.content-svg', {opacity: 0,  ease: 'power2.out', duration: 2, x: 500, rotation:16},)
 .from('.main-content', {opacity:0, ease: 'power2.out', duration: 1, x: 100, stagger: 0.5}, "-=1")
 .from('footer', { duration:2, ease: 'power2.out', opacity: 0, stagger: 0.5}, "-=1")
+.from('.sidebaar', {duration: 1, ease: 'power2.out', opacity: 0})
+.from('.side_list .side', {duration: 0.5, x: '100%', stagger: 0.2, ease: 'power2.out' }, "-=0.3")
 
 
 
 hamburger.addEventListener('click', () => {
     wrapper.style.display = 'none'
-    displaySide.style.display = 'block'
+    displaySide.style.display = 'block' 
+    
 })
 
 cancel.addEventListener('click', () => {
     displaySide.style.display = 'none'
     wrapper.style.display = 'grid'
-
+    
 })
 
 
