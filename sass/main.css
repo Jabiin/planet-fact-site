@@ -84,7 +84,6 @@ header nav .desktop-ver {
 
 ul {
   list-style-type: none;
-  padding: 1rem 0;
   border: solid;
   border-left: none;
   border-right: none;
@@ -101,8 +100,11 @@ ul {
 }
 ul .mobile_list {
   font-size: 1.5rem;
-  color: rgb(85, 85, 85);
+  color: #fff;
   padding: 1rem;
+}
+ul .mobile_list:hover {
+  background-color: rgb(160, 115, 202);
 }
 @media only screen and (min-width: 900px) {
   ul {
@@ -188,6 +190,16 @@ main {
   }
 }
 
+.internal {
+  display: none;
+  width: 100%;
+  height: 70%;
+}
+
+.full {
+  display: block;
+}
+
 .sidebaar {
   display: none;
 }
@@ -229,6 +241,11 @@ main {
   background-color: rgb(70, 60, 201);
   color: antiquewhite;
 }
+.sidebaar .side_list .side a {
+  list-style-type: none;
+  color: #fff;
+  text-decoration: none;
+}
 .sidebaar .side_icons {
   width: 3rem;
   height: 3rem;
@@ -252,6 +269,7 @@ footer .foo_list {
   border: solid rgb(117, 116, 116);
   display: flex;
   flex-direction: row;
+  padding: 2rem 0;
   justify-content: space-between;
 }
 @media only screen and (min-width: 900px) {

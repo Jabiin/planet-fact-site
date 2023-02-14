@@ -68,20 +68,25 @@ header {
 
  ul  {
     list-style-type: none;
-    padding: 1rem 0;
+    
     border: solid;
     border-left: none;
     border-right: none;
     border-width: 0.1rem;
     width: 100%;
+   
     @media only screen and (min-width: $bp-desktop){
         border: none;
     }
     @include display;
     .mobile_list {
         font-size: 1.5rem;
-        color: $font-color-grey;
+        color: #fff;
         padding: 1rem;
+       
+        &:hover {
+            background-color: rgb(160, 115, 202);
+        }
 
     }
     
