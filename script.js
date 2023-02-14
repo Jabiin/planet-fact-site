@@ -8,8 +8,20 @@ const displaySide = document.querySelector('.sidebaar')
 const hamburger = document.querySelector('.hamMenue')
 const wrapper = document.querySelector('.wrapper')
 const sideList = document.querySelectorAll('.side')
+const overViewBtn = document.getElementById('btnOne')
+const internalBtn = document.getElementById('btnTwo')
+const overViewSvg = document.querySelector('.full')
+const internalSvg = document.querySelector('.internal')
 
+overViewBtn.addEventListener('click', () => {
+    overViewSvg.style.display = 'block'
+    internalSvg.style.display = 'none'
+})
 
+internalBtn.addEventListener('click', () => {
+    overViewSvg.style.display = 'none'
+    internalSvg.style.display = 'block'
+})
 
 
 
@@ -27,7 +39,7 @@ tl
 .from('.main-content', {opacity:0, ease: 'power2.out', duration: 1, x: 100, stagger: 0.5}, "-=1")
 .from('footer', { duration:2, ease: 'power2.out', opacity: 0, stagger: 0.5}, "-=1")
 .from('.sidebaar', {duration: 1, ease: 'power2.out', opacity: 0})
-.from('.side_list .side', {duration: 0.5, x: '100%', stagger: 0.2, ease: 'power2.out' }, "-=0.3")
+.from('.side_list .side ', {duration: 0.5, x: '100%', stagger: 0.2, ease: 'power2.out' }, "-=0.3")
 
 
 
