@@ -1,5 +1,5 @@
 
-const tl = gsap.timeline()
+const tl = gsap.timeline({pause: true})
 const list = document.querySelectorAll('.nav-lis')
 const activeLine = document.getElementById('active')
 const btn = document.querySelectorAll('.btn')
@@ -13,15 +13,7 @@ const internalBtn = document.getElementById('btnTwo')
 const overViewSvg = document.querySelector('.full')
 const internalSvg = document.querySelector('.internal')
 
-overViewBtn.addEventListener('click', () => {
-    overViewSvg.style.display = 'block'
-    internalSvg.style.display = 'none'
-})
 
-internalBtn.addEventListener('click', () => {
-    overViewSvg.style.display = 'none'
-    internalSvg.style.display = 'block'
-})
 
 
 
@@ -38,21 +30,35 @@ tl
 .from('.content-svg', {opacity: 0,  ease: 'power2.out', duration: 2, x: 500, rotation:16},)
 .from('.main-content', {opacity:0, ease: 'power2.out', duration: 1, x: 100, stagger: 0.5}, "-=1")
 .from('footer', { duration:2, ease: 'power2.out', opacity: 0, stagger: 0.5}, "-=1")
-.from('.sidebaar', {duration: 1, ease: 'power2.out', opacity: 0})
-.from('.side_list .side ', {duration: 0.5, x: '100%', stagger: 0.2, ease: 'power2.out' }, "-=0.3")
+
+
 
 
 
 hamburger.addEventListener('click', () => {
     wrapper.style.display = 'none'
     displaySide.style.display = 'block' 
+    tl.from('.side_list .side ', {duration: 0.5, x: '100%', stagger: 0.2, ease: 'power2.out' }, "-=0.3")
     
 })
 
 cancel.addEventListener('click', () => {
     displaySide.style.display = 'none'
     wrapper.style.display = 'grid'
-    
+   
 })
 
 
+overViewBtn.addEventListener('click', () => {
+    overViewSvg.style.display = 'block'
+    internalSvg.style.display = 'none'
+    tl.from('.full', {opacity: 0,  ease: 'power2.out', duration: 2, x: 500, rotation:16})
+    tl.from('.internal', {opacity: 0,  ease: 'power2.out', duration: 2, x: 500, rotation:16})
+})
+
+internalBtn.addEventListener('click', () => {
+    overViewSvg.style.display = 'none'
+    internalSvg.style.display = 'block'
+    tl.from('.full', {opacity: 0,  ease: 'power2.out', duration: 2, x: 500, rotation:16})
+    tl.from('.internal', {opacity: 0,  ease: 'power2.out', duration: 2, x: 500, rotation:16})
+})
